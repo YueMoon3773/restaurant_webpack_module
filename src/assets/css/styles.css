@@ -1,0 +1,109 @@
+*::after,
+*::before,
+* {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Helvetica, Arial, sans-serif;
+
+    --black_color: #000;
+    --white_color: #fff;
+    --white_text: #f6f6f6;
+    --black_text: #333;
+
+    --navBar_bg_color: rgba(236, 236, 236, 0.36);
+    --navBar_bg_hover_color: rgba(200, 200, 200, 0.6);
+    --navBar_btn_bg_color: rgba(238, 238, 238, 0.6);
+    --navBar_btn_hover_bg_color: rgba(250, 250, 250, 0.8);
+    --pageCard_bg_color: rgba(3, 3, 3, 0.9);
+    /* --pageCard_hover_bg_color: rgba(3, 3, 3, 0.9); */
+}
+
+body {
+    background: linear-gradient(to right, #e52e71, #ff8a00);
+}
+
+.app {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.navBar {
+    background-color: var(--navBar_bg_color);
+    width: 100%;
+    max-height: 116px;
+
+    position: sticky;
+    top: 0;
+    font-size: 1rem;
+    padding: 2.6em;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.6em;
+}
+
+.navBar:hover,
+.navBar > *:hover {
+    background-color: var(--navBar_bg_hover_color);
+}
+
+.navBtn {
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 0.6em 1.4em;
+
+    background-color: var(--navBar_btn_bg_color);
+    outline: none;
+    border-radius: 12px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    background-color: var(--navBar_btn_hover_bg_color);
+    border: 2px solid var(--white_color);
+}
+
+.navBtn.active {
+    border: 3px solid #e52e71;
+    background-color: var(--navBar_btn_hover_bg_color);
+}
+
+#contentWrapper {
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+}
+
+.contentCard {
+    grid-column: 2 / 3;
+    font-size: 1rem;
+    margin: 8em 0;
+    padding: 4em 4.6em;
+    border-radius: 36px;
+
+    background-color: var(--pageCard_bg_color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: max(6%, 3em);
+}
+
+.pageHeading {
+    font-size: 6rem;
+    color: var(--white_text);
+    margin: 0.6em 0;
+    font-style: italic;
+    user-select: none;
+}

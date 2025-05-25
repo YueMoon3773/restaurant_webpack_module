@@ -1,0 +1,58 @@
+.menuWrapper {
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 8em;
+    margin: 1.4em 0;
+    padding-top: 2em;
+
+    border-top: 2px solid var(--white_color);
+}
+
+.menuLeftSide {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    user-select: none;
+}
+
+.menuRightSide {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    user-select: none;
+}
+
+.menuRightSide.content,
+.menuRightSide.content > p {
+    align-items: flex-end;
+    text-align: left;
+}
+
+.menuTitle {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: var(--white_text);
+}
+
+.menuContent {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--white_text);
+}
+
+.menuPrice {
+    color: var(--white_text);
+    font-size: 2.6rem;
+    font-weight: 900;
+}
+
+.menuImg {
+    height: 200px;
+    aspect-ratio: 4 / 3;
+    object-fit: center;
+    object-position: center;
+}
